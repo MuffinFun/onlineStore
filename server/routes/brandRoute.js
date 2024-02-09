@@ -1,7 +1,7 @@
 const Router = require('express');
 const router = new Router();
-
-router.post('/');
-router.get('/');
+const brandController = require('../controllers/brandController');
+router.post('/', brandController.create);
+router.get('/', brandController.getALL);
 
 module.exports = router;
