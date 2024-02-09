@@ -1,4 +1,4 @@
-const ApiError = require('../error/ApiEror');
+const ApiError = require('../error/ApiError');
 
 class UserController {
   async registration(req, res) {}
@@ -8,7 +8,7 @@ class UserController {
     if (!id) {
       return next(ApiError.badRequest('Id does not exist'));
     }
-    res.json(id);
+    return res.json(id);
   }
 }
 
