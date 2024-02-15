@@ -25,7 +25,27 @@ class DeviceController {
     }
   }
   async getALL(req, res) {
-    const devices = await Device.findAll();
+    let { brandId, typeId, page, limit } = req.query;
+    limit = limit || 9;
+    page = page || 1;
+    let offset = page * limit - limit;
+    let devices;
+    if (!brandId && !typeId) {
+      devices = await Device.findAll({ limit, offset });
+    }
+    if (brandId && !typeId) {
+      devices = await Device.findAll({ where: { brandId }, limit, offset });
+    }
+    if (!brandId && typeId) {
+      devices = await Device.findAll({ where: { typeId }, limit, offset });
+    }
+    if (brandId && typeId) {
+      devices = await Device.findAll({
+        where: { brandId, typeId },
+        limit,
+        offset,
+      });
+    }
     return res.json(devices);
   }
   async getOne(req, res) {
