@@ -3,6 +3,7 @@ import Basket from './pages/Basket.jsx';
 import Shop from './pages/Shop.jsx';
 import DevicePage from './pages/DevicePage.jsx';
 import Auth from './pages/Auth.jsx';
+
 import {
   ADMIN_ROUTE,
   BASKET_ROUTE,
@@ -11,7 +12,6 @@ import {
   REGISTRATION_ROUTE,
   SHOP_ROUTE,
 } from './utils/consts.js';
-import DevicePage from './pages/DevicePage.jsx';
 
 export const authRoutes = [
   {

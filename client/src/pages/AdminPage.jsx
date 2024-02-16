@@ -1,4 +1,4 @@
-const AdminPage = ()=> {
+const AdminPage = () => {
   return <>Admin Page</>;
 }
 
