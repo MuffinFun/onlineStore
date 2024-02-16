@@ -16,5 +16,10 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    semi: ['error', 'never', { omitLastInOneLineBlock: true }],
+    //'comma-dangle': ['error', 'never'],
+    quotes: ['error', 'single'],
+    'react/prop-types': 'off',
+    //indent: ['error', 'tab'],
   },
-}
+};
