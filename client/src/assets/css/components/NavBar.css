@@ -1,0 +1,22 @@
+.nav-bar__link {
+  color: white;
+  text-decoration: none;
+  cursor: default;
+  transition: all 235ms;
+}
+.nav-bar__btn {
+  background-color: white;
+  color: black;
+  transition: all 235ms;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.nav-bar__btn:last-child {
+  margin-right: 0;
+}
+
+.nav-bar__link:hover {
+  color: rgb(107, 84, 235);
+  text-decoration: underline;
+}

@@ -1,13 +1,41 @@
+import '../../assets/css/components/NavBar.css'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Button from 'react-bootstrap/Button';
 import { useContext } from "react";
 import { Context } from "../../App";
+import {NavLink} from 'react-router-dom';
+import { SHOP_ROUTE } from '../../utils/consts.js';
+import { observer } from 'mobx-react-lite';
 
-const NavBar = () =>{
+const NavBar = observer(() =>{
 
     const {user} = useContext(Context)
 
+    const logInLogOut = () =>{
+        user.setIsAuth(true)
+    }
+
     return (
-        <></>
+        <>
+        <Navbar bg="dark" data-bs-theme="dark">
+        <Container>
+            <NavLink className='nav-bar__link' to={SHOP_ROUTE}>KupiDeviseGad</NavLink>
+            
+            {user.isAuth ? 
+            <Nav className="ml-auto">
+                <Button className='nav-bar__btn'>Admin</Button>
+                <Button className='nav-bar__btn' >LogOut</Button>
+            </Nav> 
+            :
+            <Nav className="ml-auto">
+                <Button className='nav-bar__btn' onClick={logInLogOut}>Authorization</Button>
+            </Nav>}       
+        </Container>
+        </Navbar>
+    </>
     )
-}
+})
 
 export default NavBar;

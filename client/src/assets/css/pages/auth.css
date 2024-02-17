@@ -1,0 +1,18 @@
+.auth-container {
+  height: calc(100vh - 54px);
+}
+
+.auth-container__card {
+  width: 600px;
+}
+
+.auth-form__row-reg {
+  width: auto;
+  padding: 0;
+}
+
+.auth-form__btn {
+  width: 120px;
+  cursor: pointer;
+  transition: all 235ms;
+}
