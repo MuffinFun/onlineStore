@@ -6,7 +6,7 @@ import { Context } from '../App.jsx';
 
 const AppRouter = () => {
 
-  const {user} = useContext(Context)
+  const {user, devices} = useContext(Context)
 
   return (
   <Routes>
