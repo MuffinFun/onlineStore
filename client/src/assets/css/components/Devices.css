@@ -1,0 +1,28 @@
+.device-item {
+  width: 150px;
+  cursor: pointer;
+  border: none;
+  border-radius: 0;
+  transition: background-color 75ms;
+}
+
+.device-list {
+  gap: 10px;
+}
+
+.device-item__img {
+  width: 100%;
+  height: 150px;
+}
+.device-item__star {
+  width: 16px;
+  height: 16px;
+}
+
+.device-item__bottom {
+  padding: 5px 0;
+}
+
+.device-item:hover {
+  background-color: rgb(224, 224, 224);
+}
