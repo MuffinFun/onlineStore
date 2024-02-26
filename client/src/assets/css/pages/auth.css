@@ -16,3 +16,8 @@
   cursor: pointer;
   transition: all 235ms;
 }
+
+.auth-form__bot {
+  width: 100%;
+  padding: 16px 0 0 0;
+}

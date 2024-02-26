@@ -13,7 +13,7 @@ const Auth = ()=> {
     <Container className="d-flex justify-content-center align-items-center auth-container">
       <Card className='p-5 auth-container__card'>
         <h2 className='m-auto'>{isLogin ? "Authorization" : "Registration"}</h2>
-        <Form className='d-flex flex-column'>
+        <Form className='d-flex flex-column align-items-center auth-form'>
           <Form.Control
             className='mt-3'
             placeholder='input your Email...'
@@ -22,7 +22,7 @@ const Auth = ()=> {
             className='mt-3'
             placeholder='input your Password...'
           />
-          <Row className='d-flex justify-content-between align-items-center mt-3 pl-3 pr-3'>
+          <Row className='d-flex justify-content-between align-items-center auth-form__bot'>
             {isLogin ? 
             <div className='auth-form__row-reg'>
               Don't have an Accout? <NavLink to={REGISTRATION_ROUTE}>Registration!</NavLink>

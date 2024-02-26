@@ -1,0 +1,16 @@
+.bar-btn {
+  cursor: pointer;
+}
+.bar-btn:hover {
+  background-color: rgb(211, 211, 211);
+}
+
+.brand-bar__item {
+  border: 1px solid black;
+  text-align: center;
+  width: 100px;
+  margin-right: 20px;
+}
+.brand-bar__item:last-child {
+  margin-right: 0;
+}
