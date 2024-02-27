@@ -5,13 +5,16 @@ import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 import { useContext } from "react";
 import { Context } from "../../App";
-import {NavLink} from 'react-router-dom';
-import { SHOP_ROUTE } from '../../utils/consts.js';
+import {NavLink, useNavigate} from 'react-router-dom';
+import { ADMIN_ROUTE, LOGIN_ROUTE, SHOP_ROUTE } from '../../utils/consts.js';
 import { observer } from 'mobx-react-lite';
 
 const NavBar = observer(() =>{
 
+    const history = useNavigate()
+
     const {user} = useContext(Context)
+
 
     const logInLogOut = () =>{
         user.setIsAuth(true)
@@ -25,8 +28,16 @@ const NavBar = observer(() =>{
             
             {user.isAuth ? 
             <Nav className="ml-auto">
-                <Button className='nav-bar__btn'>Admin</Button>
-                <Button className='nav-bar__btn' >LogOut</Button>
+                <Button 
+                    className='nav-bar__btn'
+                    onClick={()=>history(ADMIN_ROUTE)}
+                >
+                    Admin</Button>
+                <Button 
+                    className='nav-bar__btn'
+                    onClick={()=>history(LOGIN_ROUTE)} 
+                >
+                    LogOut</Button>
             </Nav> 
             :
             <Nav className="ml-auto">
