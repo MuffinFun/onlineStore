@@ -21,28 +21,28 @@ export default class DeviceStore {
         name: 'Iphone 11 pro',
         price: 12000,
         rating: 5,
-        img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fru%2F%25D1%2584%25D0%25BE%25D1%2582%25D0%25BE%25D0%25B3%25D1%2580%25D0%25B0%25D1%2584%25D0%25B8%25D0%25B8%2Fiphone&psig=AOvVaw00qSdCk9J2WUcDU8SAKU8X&ust=1708236528342000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCMDzqI3bsYQDFQAAAAAdAAAAABAE',
+        img: 'https://shop.mts.by/upload/resize_cache/webp/iblock/798/Smartfon-Apple-iPhone-13-128GB-_rozovyy_.webp',
       },
       {
         id: 2,
         name: 'Iphone 12 pro',
         price: 12000,
         rating: 5,
-        img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fru%2F%25D1%2584%25D0%25BE%25D1%2582%25D0%25BE%25D0%25B3%25D1%2580%25D0%25B0%25D1%2584%25D0%25B8%25D0%25B8%2Fiphone&psig=AOvVaw00qSdCk9J2WUcDU8SAKU8X&ust=1708236528342000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCMDzqI3bsYQDFQAAAAAdAAAAABAE',
+        img: 'https://shop.mts.by/upload/resize_cache/webp/iblock/798/Smartfon-Apple-iPhone-13-128GB-_rozovyy_.webp',
       },
       {
         id: 3,
         name: 'Iphone 13 pro',
         price: 12000,
         rating: 5,
-        img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fru%2F%25D1%2584%25D0%25BE%25D1%2582%25D0%25BE%25D0%25B3%25D1%2580%25D0%25B0%25D1%2584%25D0%25B8%25D0%25B8%2Fiphone&psig=AOvVaw00qSdCk9J2WUcDU8SAKU8X&ust=1708236528342000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCMDzqI3bsYQDFQAAAAAdAAAAABAE',
+        img: 'https://shop.mts.by/upload/resize_cache/webp/iblock/798/Smartfon-Apple-iPhone-13-128GB-_rozovyy_.webp',
       },
       {
         id: 4,
         name: 'Iphone 13 pro',
         price: 12000,
         rating: 5,
-        img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fru%2F%25D1%2584%25D0%25BE%25D1%2582%25D0%25BE%25D0%25B3%25D1%2580%25D0%25B0%25D1%2584%25D0%25B8%25D0%25B8%2Fiphone&psig=AOvVaw00qSdCk9J2WUcDU8SAKU8X&ust=1708236528342000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCMDzqI3bsYQDFQAAAAAdAAAAABAE',
+        img: 'https://shop.mts.by/upload/resize_cache/webp/iblock/798/Smartfon-Apple-iPhone-13-128GB-_rozovyy_.webp',
       },
     ];
     this._selectedType = {};

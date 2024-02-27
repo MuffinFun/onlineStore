@@ -1,0 +1,34 @@
+.device-info {
+  margin-top: 30px;
+}
+
+.device-info__img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+
+.device-info__rating {
+  background: url('../../images/ratingStar.png') no-repeat center center;
+  width: 240px;
+  height: 240px;
+  background-size: cover;
+  font-size: 64px;
+}
+.device-info__card {
+  width: 300px;
+  height: 300px;
+  border: 5px solid lightgray;
+  font-size: 32px;
+}
+
+.device-info__info {
+  padding: 10px;
+}
+
+.device-info__info_lightgray {
+  background-color: lightgray;
+}
+.device-info__info_transparent {
+  background-color: transparent;
+}
