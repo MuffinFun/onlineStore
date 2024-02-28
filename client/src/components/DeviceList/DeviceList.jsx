@@ -1,6 +1,6 @@
 import { observer } from "mobx-react-lite";
 import { useContext } from "react";
-import { Context } from "../../App.jsx";
+import { Context } from "../../main.jsx";
 import { Row } from "react-bootstrap";
 import DeviceItem from "./DeviceItem.jsx";
 

@@ -5,7 +5,7 @@ import { LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE } from '../utils/consts.js'
 import { login, registration } from '../http/userAPI.js';
 import { useContext, useState } from 'react';
 import { observer } from 'mobx-react-lite';
-import { Context } from '../App.jsx';
+import { Context } from '../main.jsx';
 
 const Auth = observer(()=> {
   const {user} = useContext(Context)

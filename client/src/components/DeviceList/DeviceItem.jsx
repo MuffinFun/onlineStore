@@ -9,7 +9,7 @@ const DeviceItem = ({device}) => {
   return (
     <Col md='3' onClick={()=>history(DEVICE_ROUTE + "/" + device.id)}>
         <Card className="device-item">
-            <Image className="device-item__img" src={device.img}/>
+            <Image className="device-item__img" src={import.meta.env.VITE_API_URL + device.img}/>
             <div className="d-flex justify-content-between align-items-center device-item__bottom">
                 <p className="mb-0">Sams</p>
                 <div className="d-flex align-items-center">
