@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 import { useContext } from "react";
-import { Context } from "../../App";
+import { Context } from "../../main.jsx";
 import {NavLink, useNavigate} from 'react-router-dom';
 import { ADMIN_ROUTE, LOGIN_ROUTE, SHOP_ROUTE } from '../../utils/consts.js';
 import { observer } from 'mobx-react-lite';
@@ -15,9 +15,9 @@ const NavBar = observer(() =>{
 
     const {user} = useContext(Context)
 
-
-    const logInLogOut = () =>{
-        user.setIsAuth(true)
+    const logOut = () =>{
+        user.setUser({})
+        user.setIsAuth(false)
     }
 
     return (
@@ -35,13 +35,13 @@ const NavBar = observer(() =>{
                     Admin</Button>
                 <Button 
                     className='nav-bar__btn'
-                    onClick={()=>history(LOGIN_ROUTE)} 
+                    onClick={()=>logOut()} 
                 >
                     LogOut</Button>
             </Nav> 
             :
             <Nav className="ml-auto">
-                <Button className='nav-bar__btn' onClick={logInLogOut}>Authorization</Button>
+                <Button className='nav-bar__btn' onClick={()=>history(LOGIN_ROUTE)}>Authorization</Button>
             </Nav>}       
         </Container>
         </Navbar>

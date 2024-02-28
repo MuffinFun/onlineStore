@@ -1,5 +1,5 @@
 import { observer } from "mobx-react-lite";
-import { Context } from "../../App.jsx";
+import { Context } from "../../main.jsx";
 import { useContext } from "react";
 import { Card, Row } from "react-bootstrap";
 import '../../assets/css/components/BarStyles.css'

@@ -2,7 +2,7 @@ import { Routes, Route, Navigate} from 'react-router-dom';
 import {authRoutes, publicRoutes} from '../routes.js' 
 import { SHOP_ROUTE } from '../utils/consts.js';
 import { useContext } from 'react';
-import { Context } from '../App.jsx'; 
+import { Context } from '../main.jsx'; 
 
 const AppRouter = () => {
 

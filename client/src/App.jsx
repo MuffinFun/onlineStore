@@ -1,28 +1,39 @@
 import './assets/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { createContext } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import AppRouter from './components/AppRouter.jsx';
-import UserStore from './store/UserStore.js'
-import DeviceStore from './store/DeviceStore.js';
 import NavBar from './components/NavBar/NavBar.jsx';
+import { observer } from 'mobx-react-lite';
+import {check} from './http/userAPI.js'
+import { Spinner } from 'react-bootstrap';
+import { Context } from './main.jsx';
 
-export const Context = createContext(null) 
 
+const App = observer(()=> {
 
-function App() {
+  const {user} = useContext(Context)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(()=>{
+    setTimeout(() => {
+      check().then(data =>{
+          user.setIsAuth(true)
+          user.setUser(true)
+        }).finally(()=>setLoading(false))
+    }, 500);
+  },[])
+
+  if(loading){
+    return <Spinner animation='grow'/>
+  }
 
   return (
-    <Context.Provider value={{
-      user: new UserStore(),
-      devices: new DeviceStore()
-    }}>
       <BrowserRouter>
         <NavBar/>
         <AppRouter/>
       </BrowserRouter>
-    </Context.Provider>
   );
-}
+})
 
 export default App
