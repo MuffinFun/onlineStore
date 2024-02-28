@@ -1,25 +1,35 @@
 import '../assets/css/pages/auth.css'
 import {Container, Card, Form, Button, Row} from "react-bootstrap";
-import {NavLink, useLocation} from 'react-router-dom';
-import { LOGIN_ROUTE, REGISTRATION_ROUTE } from '../utils/consts';
+import {NavLink, useLocation, useNavigate} from 'react-router-dom';
+import { LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE } from '../utils/consts.js';
 import { login, registration } from '../http/userAPI.js';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { observer } from 'mobx-react-lite';
+import { Context } from '../App.jsx';
 
-const Auth = ()=> {
+const Auth = observer(()=> {
+  const {user} = useContext(Context)
   const Location = useLocation()
+  const history = useNavigate()
 
   const isLogin = Location.pathname === LOGIN_ROUTE;
-
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
   const click = async ()=>{
+    try {
+      let data;
+      if(isLogin){
+        data = await login(email, password)
+      }else{
+        data = await registration(email, password)
+      }
+      user.setUser(data)
+      user.setIsAuth(true)
+      history(SHOP_ROUTE)
 
-    if(isLogin){
-      const response = await login()
-    }else{
-      const response = await registration(email, password)
-      console.log(response)
+    } catch (error) {
+      alert(error.response.data.message)
     }
   }
 
@@ -65,6 +75,6 @@ const Auth = ()=> {
     </Container>
   </>
   );
-}
+})
 
 export default Auth;
