@@ -20,8 +20,10 @@ export const createDevice = async (device) => {
   const { data } = await authHost.post('/api/device', device);
   return data;
 };
-export const fetchDevices = async () => {
-  const { data } = await host.get('/api/device');
+export const fetchDevices = async (brandId, typeId, page, limit = 5) => {
+  const { data } = await host.get('/api/device', {
+    params: { brandId, typeId, page, limit },
+  });
   return data;
 };
 export const fetchOneDevice = async (id) => {

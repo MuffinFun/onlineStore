@@ -15,6 +15,8 @@ const NavBar = observer(() =>{
 
     const {user} = useContext(Context)
 
+    let isAuth = user.isAuth || false
+
     const logOut = () =>{
         user.setUser({})
         user.setIsAuth(false)
@@ -26,7 +28,7 @@ const NavBar = observer(() =>{
         <Container>
             <NavLink className='nav-bar__link' to={SHOP_ROUTE}>KupiDeviseGad</NavLink>
             
-            {user.isAuth ? 
+            {isAuth ? 
             <Nav className="ml-auto">
                 <Button 
                     className='nav-bar__btn'
